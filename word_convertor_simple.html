@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>digit's related problem2</title>
+</head>
+<body>
+	<form id="form">
+		<input type="number" id="num" autocomplete="off">
+		<input type="submit">
+	</form>
+<p id="result"></p>
+<script type="text/javascript">
+	var form=document.getElementById("form");
+form.onsubmit=function()
+{
+var result=document.getElementById("result");	
+var num=Number(document.getElementById("num").value);	
+	var x=num.toString();
+	var length=num.toString().length;
+	 for(var i=0;i<length;i++)
+	 {
+	 switch(x[i])//switch(x.charAt(i))
+	 {
+	 	case '0': result.innerHTML+="zero ";
+	            break;
+	    case '1': result.innerHTML+="one ";
+	            break;
+	    case '2': result.innerHTML+="two ";
+	            break;
+	    case '3': result.innerHTML+="three ";
+	            break;
+	    case '4': result.innerHTML+="four ";
+	            break;
+	    case '5': result.innerHTML+="five ";
+	            break;
+	    case '6': result.innerHTML+="six ";
+	            break;
+	    case '7': result.innerHTML+="seven ";
+	            break;
+	    case '8': result.innerHTML+="eight ";
+	            break;
+	    case '9': result.innerHTML+="nine ";
+	            break;
+	     default: result.innerHTML="input error"; 
+	 }     
+	} 
+	return false;
+}
+</script>
+</body>
+</html>

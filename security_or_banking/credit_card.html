@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html oncontextmenu="window.alert('right click is not allowed');return false;">
+<head>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+	<title>enter credit card number</title>
+	<style type="text/css">
+		input{width: 50px;height: 20px;letter-spacing: 5px;}
+	</style>
+</head>
+<body>
+	<form autocomplete="off">
+		Enter credit card number<br />
+		<input type="text" maxlength="4" id="a" onkeyup="demo(this,'b')">
+		<input type="text" maxlength="4" id="b" onkeyup="demo(this,'c')">
+		<input type="text" maxlength="4" id="c" onkeyup="demo(this,'d')">
+		<input type="text" maxlength="4" id="d" onkeyup="demo(this,'a')">
+	</form>
+<script type="text/javascript">
+  history.pushState(null,null,'welcome');
+  history.pushState(null,null,'location.href');
+  
+  function demo(x,y)
+  {
+  	var user=x.value.length;
+  	  var length=x.getAttribute('maxlength');
+  	  if(user==length)
+       document.getElementById(y).focus();
+  }
+  document.onkeydown=function(event)
+  {
+     if(event.ctrlKey && event.keyCode==85 || event.ctrlKey&&event.shiftKey&&event.keyCode==73)
+     {	
+     	window.alert('dont press again');
+          return false;
+     }
+  }
+</script>
+</body>
+</html>

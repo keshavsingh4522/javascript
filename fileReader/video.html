@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>FileReader</title>
+	<script type="text/javascript">
+		var demo=function(x)
+		{
+			"use strict";
+           var input=x.target;
+           var reader= new FileReader();
+            reader.onload=function()
+            {
+            	var filename=reader.result;
+            	var result=document.getElementById("result");
+            	result.src=filename;
+            };
+            reader.readAsDataURL(input.files[0]);
+		};
+	</script>
+</head>
+<body>
+<input type="file" accept="video/*" onchange="demo(event)">
+<video id="result" controls  width="720" height="480" style="border:1px solid red;"></video>
+</body>
+</html>

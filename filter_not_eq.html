@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" item="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="btn-group" id="a">
+	<button class="btn btn-success  a">filter:first</button>
+	<button class="btn btn-info b">filter:last</button>
+	<button class="btn btn-danger c">filter:odd</button>
+	<button class="btn btn-primary d">filter:even</button>
+</div>
+<div class="btn-group" id="b">
+	<button class="btn btn-success  a">not:first</button>
+	<button class="btn btn-info b">not:last</button>
+	<button class="btn btn-danger c">not:odd</button>
+	<button class="btn btn-primary d">not:even</button>
+</div>
+<div class="btn-group" id="c">
+	<button class="btn btn-success  a">eq(2)</button>
+	<button class="btn btn-info b">eq(-1)</button>
+	<button class="btn btn-danger c">eq(5)</button>
+	<button class="btn btn-primary d">eq(-3)</button>
+</div>
+<div>
+	<button class="btn refresh btn-secondary">refresh</button>
+</div>
+<ol id="f">
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+	<li>keshav</li>
+</ol>
+<script>
+	$(document).ready(function(){
+		// filter
+		$('#a .a').click(function(){
+			$("ol li").filter(':first').css({'color':'red'});
+		});
+		$('#a .b').click(function(){
+			$("ol li").filter(':last').css({'color':'red'});
+		});
+		$('#a .c').click(function(){
+			$("ol li").filter(':odd').css({'color':'red'});
+		});
+		$('#a .d').click(function(){
+			$("ol li").filter(':even').css({'color':'red'});
+		});
+		// not
+		$('#b .a').click(function(){
+			$("ol li").not(':first').css({'color':'red'});
+		});
+		$('#b .b').click(function(){
+			$("ol li").not(':last').css({'color':'red'});
+		});
+		$('#b .c').click(function(){
+			$("ol li").not(':odd').css({'color':'red'});
+		});
+		$('#b .c').click(function(){
+			$("ol li").not(':even').css({'color':'red'});
+		});
+		// eq
+		$('#c .a').click(function(){
+			$("ol li").eq(2).css({'color':'red'});
+		});
+		$('#c .b').click(function(){
+			$("ol li").eq(-1).css({'color':'red'});
+		});
+		$('#c .c').click(function(){
+			$("ol li").eq(5).css({'color':'red'});
+		});
+		$('#c .d').click(function(){
+			$("ol li").eq(-3).css({'color':'red'});
+		});
+		// refresh
+		$(".refresh").click(function(){
+			history.go(0);
+		});
+	});
+</script>
+</body>
+</html>

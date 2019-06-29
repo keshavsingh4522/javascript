@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*
+		{
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		#parent
+		{
+			width: 400px;
+			height: 400px;
+			background-color: #ddd;
+			padding: 50px;
+		}
+		#child
+		{
+			width: 300px;
+			height: 300px;
+			background-color: darkred;
+		}
+	</style>
+</head>
+<body>
+<div id="parent">
+	<div id="child"></div>
+</div>
+<script>
+	var x=document.getElementById('parent');
+	var y=document.getElementById('child');
+	x.onclick=function(){
+		console.log('you clicked on parent div');
+	}
+	y.onclick=function(){
+		console.log('you clicked on child div');
+		event.stopPropagation()
+	}
+</script>
+</body>
+</html>

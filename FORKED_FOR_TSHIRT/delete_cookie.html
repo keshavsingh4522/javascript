@@ -1,0 +1,28 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+<body>  
+     
+<input type="button" value="Set Cookie" onclick="setCookie()">  
+<input type="button" value="Get Cookie" onclick="getCookie()">  
+<script>  
+function setCookie()   
+{  
+    document.cookie="name=Martin Roy; expires=Sun, 20 Aug 2000 12:00:00 UTC";  
+    
+}   
+function getCookie()  
+{  
+    if(document.cookie.length!=0)  
+    {  
+    alert(document.cookie);  
+    }  
+    else  
+    {  
+        alert("Cookie not avaliable");  
+    }  
+}  
+</script>  
+</body>  
+</html> 

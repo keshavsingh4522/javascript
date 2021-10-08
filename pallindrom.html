@@ -2,35 +2,46 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
-	<title>digit's related problem2</title>
+	<title>Digit's related problem: palindrome</title>
 </head>
 <body>
 	<form id="form">
-		<input type="number" id="num">
-		<input type="submit">
+		<input type="number" id="num" placeholder="Type a number">
+        
+		<button type="submit" title="Check if it is a palindrome">
+            Check
+        </button>
 	</form>
-<p id="result"></p>
-<script type="text/javascript">
-	var form=document.getElementById("form");
-form.onsubmit=function()
-{
-var result=document.getElementById("result");	
-var num=document.getElementById("num").value;	
-	var x=Number(num);
-	var y=x;
-	//var length=x.toString().length;
-	var sum=0;
-	var r=0;
-	while(x!==0)
-	{r=x%10;
-	sum=r+10*sum;
-	x=parseInt(x/10);}
-	if(y===sum)
-    	result.innerHTML="Entered number is pallindrome";
-    else
-    	result.innerHTML="Entered number is not pallindrome";
-	return false;
-}
-</script>
+    
+    <p id="result"></p>
+
+    <script type="text/javascript">
+        // DOM Elements
+	    const form = document.getElementById("form");
+        const result = document.getElementById("result");    
+    
+        form.onsubmit= function() {
+            const numStr = document.getElementById("num").value;	
+            
+            let x = Number(numStr);
+            let y = x;
+            
+            let sum = 0;
+            let r = 0;
+            
+            while (x!==0) {
+                r = x % 10;
+                sum = r + 10*sum;
+                x = parseInt(x / 10);
+            }
+                
+            if (y === sum)
+                result.innerHTML = "Entered number is palindrome";
+            else
+                result.innerHTML = "Entered number is not palindrome";
+                
+            return false;
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Palindrome Problem</title>
+</head>
+<body>
+	<form id="form">
+		<input type="text" id="pal">
+		<input type="submit">
+	</form>
+<p id="result"></p>
+<script type="text/javascript">
+	var form=document.getElementById("form");
+form.onsubmit=function()
+{
+var result=document.getElementById("result");	
+var str=document.getElementById("pal").value;	
+	var x=str;
+	var y=x.split("").reverse().join("");
+	if(x===y){
+  alert("The entered text is a palindrome");
+  }
+  else{
+  alert("The entered text is not a palindrome");}
+}
+</script>
+</body>
+</html>

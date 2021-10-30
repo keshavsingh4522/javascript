@@ -1,27 +1,12 @@
 <html> 
 <head> 
-	<script> 
-		//function that display value 
-		function dis(val) 
-		{ 
-			document.getElementById("result").value+=val 
-		} 
-		
-		//function that evaluates the digit and return result 
-		function solve() 
-		{ 
-			let x = document.getElementById("result").value 
-			let y = eval(x) 
-			document.getElementById("result").value = y 
-		} 
-		
-		//function that clear the display 
-		function clr() 
-		{ 
-			document.getElementById("result").value = "" 
-		} 
-	</script> 
+	<meta lang="en-US">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Calculator</title>
+
 	<!-- for styling -->
+
 	<style> 
 		.title{ 
 		margin-bottom: 10px; 
@@ -29,7 +14,7 @@
 		width: 210px; 
 		color:green; 
 		border: solid black 2px; 
-		} 
+		}  
 
 		input[type="button"] 
 		{ 
@@ -47,9 +32,10 @@
 		} 
 	</style> 
 </head> 
-<!-- create table -->
+
 <body> 
-	<div class = title >GeeksforGeeks Calculator</div> 
+	<div class ="title">GeeksforGeeks Calculator</div> 
+	<!-- create table -->
 	<table border="1"> 
 		<tr> 
 			<td colspan="3"><input type="text" id="result"/></td> 
@@ -84,5 +70,26 @@
 			<td><input type="button" value="*" onclick="dis('*')"/> </td> 
 		</tr> 
 	</table> 
+	<script> 
+		//function that display value 
+		function dis(val) 
+		{ 
+			document.getElementById("result").value+=val 
+		} 
+		
+		//function that evaluates the digit and return result 
+		function solve() 
+		{ 
+			let x = document.getElementById("result").value 
+			let y = eval(x) 
+			document.getElementById("result").value = y 
+		} 
+		
+		//function that clear the display 
+		function clr() 
+		{ 
+			document.getElementById("result").value = "" 
+		} 
+	</script> 
 </body> 
 </html> 

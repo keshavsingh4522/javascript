@@ -1,0 +1,43 @@
+#clock circle{
+	fill: white;
+	stroke: black;
+	stroke-width:3;
+}
+.rect{
+	fill: purple;
+	stroke: violet;
+	stroke-width:2;
+}
+.ell{
+	fill: violet;
+	stroke: cyan;
+	stroke-width:2;
+}
+/*.svg_02{
+	fill: green;
+	stroke: white;
+	stroke-width:2;
+}*/
+
+.line{
+	stroke: rgb(255,0,0);
+	stroke-width:2;
+	opacity: 0.6;
+}
+.pg{
+	fill: lime;
+	stroke: black;
+	stroke-width:1;
+}
+.pg_0{
+	fill: blue;
+	fill-rule: evenodd;
+	stroke: black;
+	stroke-width:1;
+}
+.pl{
+	/*fill: cyan;*/
+	fill: blue;
+	stroke: red;
+	stroke-width:4;
+}

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    box-sizing: border-box;
+    background-image:linear-gradient(140deg, rgba(139, 92, 113, 0.6) 20%, rgba(67, 90, 117, 0.6)100%),url("Media/calc_fresh.jpg");
+    background-size: 1400px 933px;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.head h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6em 0;
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #6e1794;
+    font-family: Verdana;
+    letter-spacing: 0.4em;
+}
+.head h1::selection {
+    background-color:#A794A2;
+    color: #f7f7f7;
+}
+.head hr{
+    width:95%;
+    height: 1px;
+    margin: auto;
+    border: none;
+    margin-bottom: 2em;
+    background-color: #670f8d;
+
+}
+.head span{
+    color:#c9428c;
+}
+.head span::selection {
+    background-color:rgba(4, 190, 236, 0);
+    color: #f7f7f7;
+}
+.calcborderfg{
+    width: 400px;
+    height: 490px;
+    border-radius: 10px 10px 500px 10px;
+    margin: -5px auto;
+    background: linear-gradient(140deg, rgba(174, 101, 243, 0.8) 30%, rgba(37, 126, 228, 0.7) 100%);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(5px);
+}
+.calcborderbg{
+    width: 400px;
+    height: 490px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(4.4px);
+    box-shadow: 0 4px 30px rgba(226, 226, 226, 0.342);
+    border-radius: 10px 10px 10px 10px;
+    margin: -5px auto;
+}
+
+input{
+    margin: 20px;
+    padding-right: 18px;
+    width: 85%;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Graduate', cursive;
+    text-align: right;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: #AC6FE3;
+    background-color: #d8d8d8;
+    border-radius: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 10px;
+}
+input::selection{
+    background-color: rgba(123, 201, 221,0);
+    color: #807775;
+}
+
+.tagline{
+    font-size: 15px;
+    font-family:'Graduate', cursive;
+    color: #f7f7f7;
+    margin: -35px 6.9rem -10px 7.2rem;
+    letter-spacing: 0.26rem;
+}
+
+.tagline h5::selection{
+    background-color: rgba(123, 201, 221,0);
+    color: #0B5854;
+}
+
+.calx-btns{
+    margin: 10px 20px;
+    display: grid;
+    grid-template: repeat(5,1fr)/repeat(4,1fr);
+    grid-gap: 5px;
+    width: 90%;
+}
+
+.calx-btn{
+    cursor: pointer;
+    width: 100%;
+    height: 65px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #0B5854;
+    border: none;
+    background-color: #ffffff50;
+    font-family: 'Graduate', cursive;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(4.4px);
+    
+}
+
+.calx-btn::selection{
+    background-color: rgba(123, 201, 221,0);
+    color: #f7f7f7;
+}
+
+.clr,.equal{
+    grid-column: span 2;
+    background-color: #e4b0ce96;
+    color: #703355;
+}
+.clr::selection, .equal::selection{
+    background-color: rgba(123, 201, 221,0);
+    color: #f7f7f7;
+}
